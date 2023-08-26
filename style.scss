@@ -7,8 +7,8 @@ $blue : #0369a1;
 *{
     margin: 0;
     border: 0;
-    outline: 1px solid red;
-    // outline: none;
+    // outline: 1px solid red;
+    outline: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
@@ -104,22 +104,17 @@ main{
         left:15%;
         top : 15%;
         p{
-            // margin: 5% 0 0 7%;
-            // display: inline-block;
             &:nth-child(1){
                 color: $pink;
                 font-size: 100px;
-                // font-weight: 600;
             }
             &:nth-child(2){
                 color: $pink;
                 font-size: 70px;
-                // font-weight: 600;
             }
             &:nth-child(3){
                 color: $pink;
                 font-size: 40px;
-                // font-weight: 600;
             }
             &:nth-child(4){
                button{
@@ -145,7 +140,6 @@ main{
 #products{
     margin: 2% 0 0 0;
     padding: 0 0 0 5%;
-    // height: 250vh;
     height: max-content;
     h2{
         font-size: 70px;
@@ -210,7 +204,6 @@ main{
         text-transform: uppercase;
     }
     div{
-        // text-align: center;
         padding: 0 0 0 7%;
         p{
             font-size: 20px;
@@ -225,7 +218,6 @@ main{
             input{
                 width: 80%;
                 height: 40px;
-                // border: 1px solid $pink;
                 &[name = 'message']{
                     height: 150px;
                 }
@@ -309,6 +301,6 @@ main{
 
 @media (min-width: 1024px) {
     #contact{
-        margin-top: 10rem;
+        // margin-top: 10rem;
     }    
   }
