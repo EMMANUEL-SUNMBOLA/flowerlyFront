@@ -254,22 +254,21 @@ main{
     }
 }
 
-// #about{
-//     height: 50vh;
-//     div{
-//         span{
-
-//         }
-//     }
-// }
-
-@media(max-width: 650px){
+@media(max-width: 768px){
+    nav{
+        .nav-cont{
+            display: none;
+        }
+        button{
+            margin-left: auto;
+        }
+    }
     #products {
         .container{
-        // padding: 0 0 0 10%;
-        grid-template-columns: repeat(2, 1fr);
+            padding: 0 0 0 8%;
+            grid-template-columns: repeat(2, 1fr);
             div{
-                width: 250px;
+                width: 150px;
                 img{
                     width: inherit;
                 }
@@ -278,6 +277,7 @@ main{
     } 
     #contact{
         outline: 1px solid red;
-        margin-top: 100px;
+        // margin-top: 300px;
+        margin: 150% 0 0 0;
     }
 }
