@@ -7,7 +7,6 @@ $blue : #0369a1;
 *{
     margin: 0;
     border: 0;
-    // outline: 1px solid red;
     outline: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -39,7 +38,6 @@ nav{
     display: flex;
     flex-direction: row;    
     .nav-brand{
-        // outline: 1px solid red;
         text-transform: uppercase;
         list-style: none;
         font-size: 25px;
@@ -54,12 +52,10 @@ nav{
     .nav-cont{
         margin-left: auto;
         float: right;
-        // outline: 1px solid green;
         display: flex;
         justify-content:space-evenly ;
         list-style: none;
         width: 50%;
-        // gap: 10%;
         text-transform: capitalize;
             li{
                 float: right;
@@ -194,7 +190,7 @@ main{
 }
 
 #contact{
-    height: 100vh;
+    height: max-content;
     margin: 25% 0 0 0;
     background-color: $blue;
     color: $white;
@@ -298,9 +294,3 @@ main{
         margin: 170% 0 0 0;
     }
 }
-
-@media (min-width: 1024px) {
-    #contact{
-        // margin-top: 10rem;
-    }    
-  }
