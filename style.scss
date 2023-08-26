@@ -1,0 +1,283 @@
+$pink : #dc3545;
+$black : #020202;
+$white : #f5f4f5;
+$purp : #1b1c30;
+$blue : #0369a1;
+
+*{
+    margin: 0;
+    border: 0;
+    // outline: 1px solid red;
+    outline: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+body{
+    background-color: $white;
+    transition: all .5s ease-in-out;
+    font-family: sans-serif;
+}
+
+.dark{
+    filter: invert(1);
+    background-color: $black;
+    transition: all .5s ease-in-out;
+    main{
+        height: 100vh;
+        transition: all 0s ease-in-out;
+        div{
+            top: 4%;
+        }
+    }
+}
+
+nav{
+    background-color: $pink;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;    
+    .nav-brand{
+        // outline: 1px solid red;
+        text-transform: uppercase;
+        list-style: none;
+        font-size: 25px;
+        li{
+            a{
+                text-decoration: none;
+                color: $black;
+                font-weight: 900;
+            }
+        }
+    }
+    .nav-cont{
+        margin-left: auto;
+        float: right;
+        // outline: 1px solid green;
+        display: flex;
+        justify-content:space-evenly ;
+        list-style: none;
+        width: 50%;
+        // gap: 10%;
+        text-transform: capitalize;
+            li{
+                float: right;
+                a{
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #000;
+                    transition: all .37s ease-in-out;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+    }
+
+    button{
+        width: 65px;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: rgba(240, 240, 240, 0.5);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transition: all .37s ease-in-out;
+        &:hover{
+            background-color: #f5f4f5;
+            color: $black;
+        }
+    }
+}
+
+main{
+    height: 100vh;
+    background-image: url("../images/home-bg.jpg");
+    transition: all 0s ease-in-out;
+    div{
+        position: absolute;
+        left:15%;
+        top : 15%;
+        p{
+            // margin: 5% 0 0 7%;
+            // display: inline-block;
+            &:nth-child(1){
+                color: $pink;
+                font-size: 100px;
+                // font-weight: 600;
+            }
+            &:nth-child(2){
+                color: $pink;
+                font-size: 70px;
+                // font-weight: 600;
+            }
+            &:nth-child(3){
+                color: $pink;
+                font-size: 40px;
+                // font-weight: 600;
+            }
+            &:nth-child(4){
+               button{
+                    width: 200px;
+                    height: 50px;
+                    background-color: $white;
+                    color: $black;
+                    border-radius: 5%;
+                    border: 1px solid $pink;
+                    font-size: 25px;
+                    color: $pink;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        background-color: $pink;
+                        color: $white;
+                    }
+               }
+            }
+        }
+    }
+}
+
+#products{
+    margin: 2% 0 0 0;
+    padding: 0 0 0 5%;
+    height: 200vh;
+    h2{
+        font-size: 70px;
+        color: $pink;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+        z-index: 2;
+        div{
+            width: 300px;
+            box-shadow:
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+            100px 100px 80px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            background-color: #ffffff;
+            img{
+                width: inherit;
+            }
+            p{
+                &:nth-child(2){
+                    color: red;
+                    font-size: 25px;
+                    text-transform: capitalize;
+                }
+                &:nth-child(3){
+                    color: $black;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                }
+            }
+            button{
+                width: 100px;
+                height: 40px;
+                border: 1px solid $pink;
+                font-size: 20px;
+                transition: all .5s ease-in-out;
+                border-radius: 5px;
+                margin-top: 3px;
+                &:hover{
+                    background-color: $pink; 
+                    color: $white; 
+                    cursor: pointer;
+                    backdrop-filter: blur(10px);              
+                }
+            }
+        }
+    }
+}
+
+#contact{
+    margin: 25% 0 0 0;
+    background-color: $blue;
+    color: $white;
+    h2{
+        font-size: 50px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    div{
+        // text-align: center;
+        padding: 0 0 0 7%;
+        p{
+            font-size: 20px;
+            font-weight: 100;
+            color: $white;
+        }
+        form{
+            margin-top: 1%;
+            label{
+                font-size: 20px;
+            }
+            input{
+                width: 80%;
+                height: 40px;
+                // border: 1px solid $pink;
+                &[name = 'message']{
+                    height: 150px;
+                }
+                &[name = 'email']{
+                    margin: 20px 0 20px 0;
+                }
+            }
+            button{
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin-top: 1%;
+                font-size: 16px;
+                background-color: rgba(240, 240, 240, 0.5);
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                cursor: pointer;
+                backdrop-filter: blur(10px);
+                transition: all .37s ease-in-out;
+                &:hover{
+                    background-color: #f5f4f5;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+// #about{
+//     height: 50vh;
+//     div{
+//         span{
+
+//         }
+//     }
+// }
+
+@media(max-width: 650px){
+    #products {
+        .container{
+        // padding: 0 0 0 10%;
+        grid-template-columns: repeat(2, 1fr);
+            div{
+                width: 250px;
+                img{
+                    width: inherit;
+                }
+            }
+        }
+    } 
+    #contact{
+        outline: 1px solid red;
+        margin-top: 100px;
+    }
+}
