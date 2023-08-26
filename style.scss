@@ -145,7 +145,8 @@ main{
 #products{
     margin: 2% 0 0 0;
     padding: 0 0 0 5%;
-    height: 250vh;
+    // height: 250vh;
+    height: max-content;
     h2{
         font-size: 70px;
         color: $pink;
