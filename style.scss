@@ -270,16 +270,16 @@ main{
             top : 15%;
             p{
                 &:nth-child(1){
-                    color: $pink;
-                    font-size: 200%;
+                    color: blue;
+                    font-size: 50%;
                 }
                 &:nth-child(2){
                     color: $pink;
-                    font-size: 200%;
+                    font-size: 50%;
                 }
                 &:nth-child(3){
                     color: $pink;
-                    font-size: 200%;
+                    font-size: 50%;
                 }
             }
         }
