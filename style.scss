@@ -263,6 +263,28 @@ main{
             margin-left: auto;
         }
     }
+    main{
+        div{
+            position: absolute;
+            left:15%;
+            top : 15%;
+            p{
+                &:nth-child(1){
+                    color: $pink;
+                    font-size: 300%;
+                }
+                &:nth-child(2){
+                    color: $pink;
+                    font-size: 300%;
+                }
+                &:nth-child(3){
+                    color: $pink;
+                    font-size: 300%;
+                }
+            }
+        }
+    }
+
     #products {
         .container{
             padding: 0 0 0 8%;
@@ -276,8 +298,8 @@ main{
         }
     } 
     #contact{
-        outline: 1px solid red;
+        // outline: 1px solid red;
         // margin-top: 300px;
-        margin: 150% 0 0 0;
+        margin: 170% 0 0 0;
     }
 }
