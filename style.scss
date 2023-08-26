@@ -271,21 +271,24 @@ main{
             p{
                 &:nth-child(1){
                     color: blue;
-                    font-size: 50%;
+                    font-size: 200%;
                 }
                 &:nth-child(2){
                     color: $pink;
-                    font-size: 50%;
+                    font-size: 200%;
                 }
                 &:nth-child(3){
                     color: $pink;
-                    font-size: 50%;
+                    font-size: 200%;
                 }
             }
         }
     }
 
     #products {
+        h2{
+            font-size: 200%;
+        }
         .container{
             padding: 0 0 0 8%;
             grid-template-columns: repeat(2, 1fr);
