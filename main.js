@@ -1,68 +1,69 @@
 const invalidName = () => {
     let nameInpt = document.getElementById("name");
-    if (nameInpt.value.length < 5) {
+    let reg = /[0-9]/ig;
+    if ((nameInpt.value.length < 5) || (reg.test(nameInpt.value) == true)) {
         nameInpt.classList.add("err");
-        nameInpt.classList.remove("cor"); // Remove 'cor' class
+        nameInpt.classList.remove("valid"); // Remove 'cor' class
     } else {
         nameInpt.classList.remove("err"); // Remove 'err' class
-        nameInpt.classList.add("cor");
+        nameInpt.classList.add("valid");
     }
 }
 
-function validateFname() {
-    const nameInput = document.getElementById("fname");
-    const nameValue = nameInput.value.trim();
-    if (nameValue.length <= 2) {
-      nameInput.classList.add("invalid");
-    } else {
-      nameInput.classList.replace("invalid", "valid");
+    const invalidNum = () => {
+        let phone = document.getElementById("num");
+        let num = phone.value;
+        let reg = /^(\+\d{1,3})?\d+$/ig;
+        if((reg.test(num) == false)|| (num.length < 11)){
+            phone.classList.remove("valid");
+            phone.classList.add("err");
+        }else{
+            phone.classList.remove("err");
+            phone.classList.add("valid");
+        }
     }
-  }
-  function validateLname() {
-    const nameInput = document.getElementById("lname");
-    const nameValue = nameInput.value.trim();
-    if (nameValue.length < 3) {
-      nameInput.classList.add("invalid");
-    } else {
-      nameInput.classList.replace("invalid", "valid");
-    }
-  }
   
   function validateEmail(){
     let email = document.getElementById("email");
-    let reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    if(reg.test(email)){
+    let reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ig;
+    if(reg.test(email.value)){
         email.classList.remove("err");
-        email.classList.add("cor");
+        email.classList.add("valid");
     }else{
-        email.classList.remove("cor");
+        email.classList.remove("valid");
         email.classList.add("err");
     }
   }
 
-  
-  function validateEmail() {
-    const emailInput = document.getElementById("email");
-    const emailError = document.getElementById("emailError");
-    const emailValue = emailInput.value.trim();
-  
-    if (!emailValue.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      emailInput.classList.add("invalid");
-    } else {
-      emailError.textContent = "";
-      emailInput.classList.replace("invalid", "valid");
-    }
-  }
+
   
   function validatePass(){
-      const passInput = document.getElementById("passw");
-      const passValue = passInput.value.trim();
-  
-      if(passValue.length < 8){
-          passInput.classList.add("invalid");
-      } else{
-          passInput.classList.replace("invalid", "valid");
-      }
+    let pass = document.getElementById("pass");
+    let passVal = pass.value.trim();
+    let passlen = passVal.length;
+    let reg = /^(?=.*[a-zA-Z])(?=.*[0-9]).+$/ig;
+    if((passlen < 6) || (reg.test(passVal) == false)){
+        pass.classList.remove("valid");
+        pass.classList.add("err");
+    }else{
+        pass.classList.remove("err");
+        pass.classList.add("valid");
+    }
+
+  }
+
+  const confirmPass = () => {
+    let pass2 = document.getElementById("pass2")
+    let pass = document.getElementById("pass")
+    let pass2Val  = pass2.value.trim();
+    let passVal = pass.value.trim();
+    if(passVal !== pass2Val){
+        pass2.classList.remove("valid");
+        pass2.classList.add("err");
+    }else{
+        pass2.classList.remove("err");
+        pass2.classList.add("valid");
+    }
   }
 
 const darkSide = () =>{

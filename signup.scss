@@ -57,7 +57,7 @@ main{
             text-align: center;
             input{
                 width: 40%;
-                height: 30px;
+                height: 40px;
                 border-radius: 5px;
                 border: none;
                 outline: 1px solid $blue;
@@ -72,6 +72,24 @@ main{
                 }
                 &[class = 'err']{
                     outline: 1px solid red;
+                }
+                &[class = 'valid']{
+                    outline: 1px solid #39d353;
+                }
+            }
+            .eye{
+                width: 25px;
+                height: 35px;
+                color: $white;
+                margin: -1% 0 0 -2%;
+                background-color: rgba(240, 240, 240, 0.5);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    background-color: rgba(240, 240, 240, 0.7);
+                    color: $purp;
                 }
             }
             button{
