@@ -113,3 +113,16 @@ main{
         }
     }
 }
+
+@media(max-width: 768px){
+    main{
+        div{
+            form{
+                text-align: center;
+                input{
+                    display: block;
+                }
+            }
+        }
+    }
+}

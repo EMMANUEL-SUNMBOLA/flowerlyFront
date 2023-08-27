@@ -1,3 +1,8 @@
+const vis = () => {
+    let visBut = document.getElementById("eye");
+    // let inpt = 
+}
+
 const invalidName = () => {
     let nameInpt = document.getElementById("name");
     let reg = /[0-9]/ig;
@@ -34,8 +39,6 @@ const invalidName = () => {
         email.classList.add("err");
     }
   }
-
-
   
   function validatePass(){
     let pass = document.getElementById("pass");
