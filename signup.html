@@ -22,12 +22,13 @@
         <div>
             <form action="" method="post">
                 <h1>SIGNUP</h1>
-                <input type="text" name="name" id="" placeholder="NAME">
+                <input type="text" name="name" id="" placeholder="NAME" oninput="invalidName()" class="">
                 <input type="text" name="email" id="" placeholder="EMAIL"><br>
                 <input type="text" name="phone" id="" placeholder="PHONE">
                 <input type="text" name="pass" id="" placeholder="PASSWORD"><br>
                 <input type="text" name="pass2" id="" placeholder="CONFIRM PASSWORD"><br>
                 <button type="submit">CREATE</button><br>
+                <p class="errorDisp"></p>
                 <p>Already have an account ? <a href="login.html">SIGNIN</a></p>
             </form>
         </div>
