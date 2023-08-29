@@ -1,6 +1,15 @@
-const vis = () => {
+const Vis = () => {
     let visBut = document.getElementById("eye");
-    // let inpt = 
+    let inp = document.getElementById("pass");
+    inp.setAttribute('type', 'text');
+    visBut.setAttribute('onClick', 'inVis()');
+}
+
+const inVis = () =>{
+    let visBut = document.getElementById("eye");
+    let inp = document.getElementById("pass");
+    inp.setAttribute('type', 'password');
+    visBut.setAttribute('onClick', 'Vis()');
 }
 
 const invalidName = () => {
