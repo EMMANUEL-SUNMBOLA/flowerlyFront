@@ -1,15 +1,28 @@
-const Vis = () => {
-    let visBut = document.getElementById("eye");
-    let inp = document.getElementById("pass");
-    inp.setAttribute('type', 'text');
-    visBut.setAttribute('onClick', 'inVis()');
-}
+// const Vis = () => {
+//     let visBut = document.getElementById("eye");
+//     let inp = document.getElementById("pass");
+//     inp.setAttribute('type', 'text');
+//     visBut.setAttribute('onClick', 'inVis()');
+// }
 
-const inVis = () =>{
-    let visBut = document.getElementById("eye");
+// const inVis = () =>{
+//     let visBut = document.getElementById("eye");
+//     let inp = document.getElementById("pass");
+//     inp.setAttribute('type', 'password');
+//     visBut.setAttribute('onClick', 'Vis()');
+// }
+
+const togglePasswordVisibility = () => {
     let inp = document.getElementById("pass");
-    inp.setAttribute('type', 'password');
-    visBut.setAttribute('onClick', 'Vis()');
+    let eyeButton = document.querySelector(".eye");
+
+    if (inp.getAttribute('type') === 'password') {
+        inp.setAttribute('type', 'text');
+        eyeButton.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+    } else {
+        inp.setAttribute('type', 'password');
+        eyeButton.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    }
 }
 
 const invalidName = () => {

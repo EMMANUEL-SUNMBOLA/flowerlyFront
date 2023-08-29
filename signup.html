@@ -25,8 +25,8 @@
                 <input type="text" name="name" id="name" placeholder="NAME" oninput="invalidName()" class="">
                 <input type="text" name="email" id="email" placeholder="EMAIL" oninput="validateEmail()"><br>
                 <input type="text" name="phone" id="num" placeholder="PHONE" oninput="invalidNum()">
-                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()"><button class="eye" onclick="Vis()"><i class="fa-solid fa-eye" id="eye"></i></button><br>
-                <input type="password" name="pass2" id="pass2" placeholder="CONFIRM PASSWORD" oninput="confirmPass()"><button class="eye" onclick="Vis()" id="eye"><i class="fa-solid fa-eye"></i></button><br>
+                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()"><button class="eye" onclick="togglePasswordVisibility()"><i class="fa-solid fa-eye"></i></button><br>
+                <input type="password" name="pass2" id="pass2" placeholder="CONFIRM PASSWORD" oninput="confirmPass()"><button class="eye" onclick="togglePasswordVisibility()"><i class="fa-solid fa-eye"></i></button><br>
                 <button type="submit">CREATE</button><br>
                 <p class="errorDisp"></p>
                 <p>Already have an account ? <a href="login.html">SIGNIN</a></p>
