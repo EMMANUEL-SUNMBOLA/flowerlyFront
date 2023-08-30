@@ -110,3 +110,31 @@ const lightSide = () =>{
     body.classList.remove("dark");
     themeBut.setAttribute("onClick", "darkSide()");
 }
+
+function vis(){
+    var but = document.getElementById("eye");
+    var inp = document.getElementById("pass");
+    inp.setAttribute('type','text');
+    but.setAttribute('onclick', 'hide()')
+  }
+  
+  function hide(){
+    var but = document.getElementById("eye");
+    var inp = document.getElementById("pass");
+    inp.setAttribute('type','password');
+    but.setAttribute('onclick', 'vis()');
+  }
+
+  function vis2(){
+    var but = document.getElementById("eye2");
+    var inp = document.getElementById("pass2");
+    inp.setAttribute('type', 'text');
+    but.setAttribute('onclick', 'hide2()')
+  }
+  
+  function hide2(){
+    var but = document.getElementById("eye2");
+    var inp = document.getElementById("pass2");
+    inp.setAttribute('type', 'password');
+    but.setAttribute('onclick', 'vis2()');
+  }
