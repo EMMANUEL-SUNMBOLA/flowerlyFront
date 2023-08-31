@@ -123,17 +123,16 @@ main{
         align-items: center;
         justify-content: center;
         div{
-            // text-align: center;
             form{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 input{
-                    width: 60%;
+                    width: 85%;
                 }
                 .eye{
-                    margin:-6% -55% 0  0;
+                    margin:-8% -50% 0  0;
 
                 }
             }
