@@ -246,8 +246,18 @@ main{
 
 @media(max-width: 768px){
     nav{
+        flex-direction: column;
+        .nav-brand{
+            // display: block;
+            width: 100%;
+        }
         .nav-cont{
-            display: none;
+            // display: flex;
+            gap: 2%;
+            // flex-wrap: nowrap;
+            // align-items: center;
+            // justify-content: space-evenly;
+            // justify-content: flex-end;
         }
         button{
             margin-left: auto;

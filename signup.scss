@@ -44,15 +44,18 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
+    align-self: center;
     justify-content: center;
+    outline: 1px solid green;
     h1{
         color: $white;
         font-weight: 100;
         text-align: center;
     }
     div{
+        // outline: 1px solid cyan;
         width: 100%;
-        height: 70px;
+        // height: 70px;
         form{
             text-align: center;
             input{
@@ -116,11 +119,22 @@ main{
 
 @media(max-width: 768px){
     main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         div{
+            // text-align: center;
             form{
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 input{
-                    display: block;
+                    width: 60%;
+                }
+                .eye{
+                    margin:-6% -55% 0  0;
+
                 }
             }
         }
