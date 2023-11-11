@@ -3,7 +3,8 @@ $black : #020202;
 $white : #f5f4f5;
 $purp : #1b1c30;
 $blue : #0369a1;
-
+$orange : #f68b1e;
+$darkOrange : #d47008;
 *{
     margin: 0;
     border: 0;
@@ -133,6 +134,25 @@ main{
     }
 }
 
+.main{
+    height: 100vh;
+    background: rgb(77,121,9);
+    background: linear-gradient(90deg, rgba(77,121,9,1) 41%, rgba(70,106,156,1) 56%);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ h1{
+    font-size: 60px;
+    span{
+        color: $pink;
+    }
+ }
+ p{
+    font-size: 20px;
+ }
+}
+
 #products{
     margin: 2% 0 0 0;
     padding: 0 0 0 5%;
@@ -242,6 +262,79 @@ main{
             }
         }
     }
+}
+
+.shop{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    bottom: 20px;
+    background-color: $orange;
+    position: fixed;
+    transition: all .5s ease-in-out;
+    i{
+        color: white;
+    }
+
+    &:hover{
+        background-color: $darkOrange;
+        color: #ffffff;
+    }
+}
+
+#shopcart{
+    width: 70%;
+    height: 80vh;
+    display: none;
+    background-color: #ffffff;
+    position: fixed;
+    border: 1px solid #020202;
+    right: 200px;
+    bottom: 50px;
+    border-radius: 9px;
+    z-index: 3;
+    transition: all .3s ease-in-out;
+    overflow-y: scroll;
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+    h1{
+        text-align: center;
+        color: #020202;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+}
+
+.cartcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
 }
 
 @media(max-width: 768px){

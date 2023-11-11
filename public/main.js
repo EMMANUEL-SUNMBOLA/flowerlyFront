@@ -11,7 +11,7 @@
 //     inp.setAttribute('type', 'password');
 //     visBut.setAttribute('onClick', 'Vis()');
 // }
-
+// alert("js works");
 const togglePasswordVisibility = () => {
     let inp = document.getElementById("pass");
     let eyeButton = document.querySelector(".eye");
@@ -137,4 +137,14 @@ function vis(){
     var inp = document.getElementById("pass2");
     inp.setAttribute('type', 'password');
     but.setAttribute('onclick', 'vis2()');
+  }
+
+  function displayCart(event) {
+    var cart = document.getElementById("shopcart");
+    if (cart.style.display === "none" || cart.style.display === "") {
+      cart.style.display = "block";
+    } else {
+      cart.style.display = "none";
+    }
+    event.preventDefault(); // Prevent the default link action
   }

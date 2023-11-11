@@ -1,3 +1,11 @@
+<?php
+
+if($_SESSION["status"] !== "loggedIn"){
+    header("Location:index.php");
+}else{?>
+    
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,3 +131,5 @@
  <script src="main.js"></script>
 </body>
 </html>
+
+<? } ?>
