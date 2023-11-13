@@ -5,6 +5,9 @@
     if( !empty($_SESSION['name'])){
         // $name = $_GET['name'] ;
         $name = $_SESSION['name'];
+        if(isset($_SESSION["product"])){
+            
+        }
     }
     
     if(isset($_GET["logOut"])){

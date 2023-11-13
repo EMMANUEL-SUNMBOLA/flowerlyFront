@@ -148,3 +148,17 @@ function vis(){
     }
     event.preventDefault(); // Prevent the default link action
   }
+
+  function addToCart(product){
+    $.ajax({
+      type: postMessage,
+      url: index.php,
+      data: {productId: product},
+      success: function(response) {
+        alert('Product added to cart!');
+      },
+      error: function(error) {
+          console.error('Error adding product to cart:', error);
+      }
+    });
+  }
