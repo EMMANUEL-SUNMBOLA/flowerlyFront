@@ -5,9 +5,17 @@
     if( !empty($_SESSION['name'])){
         // $name = $_GET['name'] ;
         $name = $_SESSION['name'];
-        if(isset($_SESSION["product"])){
-            
-        }
+            if(isset($_SESSION["cart"])){
+                $data = $_SESSION["cart"];
+                
+                if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+                    $cartContent = implode(', ', $_SESSION['cart']);
+                    echo "Cart: $cartContent";
+                } else {
+                    echo "Cart is empty";
+                }
+                
+            }
     }
     
     if(isset($_GET["logOut"])){
@@ -210,7 +218,7 @@
                         // echo $data["url"];
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
-                        echo "<button deets='". $data["id"] . "'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
+                        echo "<button deets='". $data["id"] . "' onclick='" . $data['id'] . "'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
                         echo"</div>";
                     }
                     // }
@@ -218,8 +226,7 @@
                 }
             ?>
     </div>
-
- 
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
  <script src="main.js">
 
     
