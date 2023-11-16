@@ -105,7 +105,7 @@ if($_SESSION["status"] !== "loggedIn"){
  <div id="contact">
     <h2>contact</h2>
     <div>
-        <p>Do you want to order a special package? a question? or wanna be an affliate</p>
+        <p>Do you want to make a special order ? have a question? or you want be an affliate?</p>
         <p>No matter your needs, we're here to solve them</p>
         <p><a href="tel:09030408140">tel:09030408140</a></p>
         <form action="" method="post">
@@ -115,7 +115,7 @@ if($_SESSION["status"] !== "loggedIn"){
             <input type="text" name="email"><br>
             <label for="message">Message</label><br>
             <input type="text" name="message"><br>
-            <button type="submit">SUBMIT</button>
+            <button type="submit">SHOOT</button>
         </form>
     </div>
  </div>
