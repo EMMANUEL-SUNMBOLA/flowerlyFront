@@ -104,7 +104,7 @@
                         // echo $data["url"];
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
-                        echo "<button deets='". $data["id"] . "' id='addBtn' onclick=''><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
+                        echo "<button deets='". $data["id"] . "' id='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
                         echo"</div>";
                     }
                     // }
