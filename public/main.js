@@ -151,8 +151,8 @@ function vis(){
 
   function addToCart(product){
     $.ajax({
-      type: postMessage,
-      url: index.php,
+      type: 'POST',
+      url: 'index.php',
       data: {productId: product},
       success: function(response) {
         alert('Product added to cart!');
