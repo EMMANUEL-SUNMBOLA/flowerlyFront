@@ -11,8 +11,6 @@
                 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                     $cartContent = implode(', ', $_SESSION['cart']);
                     echo "Cart: $cartContent";
-                } else {
-                    echo "Cart is empty";
                 }
                 
             }
@@ -104,7 +102,7 @@
             //we should probably save their cart to their storage using sessions
             //i'll get to that soon
                 if(isset($name)){
-                    echo '<a href="signup.php"><button name=""><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button name="" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -116,7 +114,7 @@
             <p>this plant represents the sunflower tribe and it glows in the dark</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button name=""><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -128,7 +126,7 @@
             <p>very beautiful plant that can strive anywhere and anytime</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button name=""><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -140,7 +138,7 @@
             <p>this plant best strives in the summer, it can be a hassle to find in the winter</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button name=""><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';  
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';  
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -152,7 +150,7 @@
             <p>this is a mutated form of red roses, they are very beautiful  and can be dyed into anyother color</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button name=""><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -165,7 +163,7 @@
             </p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -177,7 +175,7 @@
             <p>this flower only grows where dragons live, with the dying population of dragons this plant is becoming extremely rare to find</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -189,7 +187,7 @@
             <p>this flower only grows in the heart of the azulon's volcano, fire nation</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -201,7 +199,7 @@
             <p>one of the rarest flowers to get,they are very beautiful tho poisonious</p>
             <?php
                 if(isset($name)){
-                    echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign" deets="ix">30.00</i></button></a>';
+                    echo '<button id="addBtn" onclick=""><i class="fa-solid fa-dollar-sign" deets="ix">30.00</i></button>';
                 }else{
                     echo '<a href="signup.php"><button><i class="fa-solid fa-dollar-sign">30.00</i></button></a>';
                 }
@@ -218,7 +216,7 @@
                         // echo $data["url"];
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
-                        echo "<button deets='". $data["id"] . "' onclick='" . $data['id'] . "'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
+                        echo "<button deets='". $data["id"] . "' id='addBtn' onclick=''><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
                         echo"</div>";
                     }
                     // }
