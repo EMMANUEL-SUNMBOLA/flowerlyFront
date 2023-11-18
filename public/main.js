@@ -162,8 +162,3 @@ function vis(){
       }
     });
   }
-
-  // window.onload = function(){
-  //   let btn = document.getElementById("");
-  //   btn.addEventListener('click') = add
-  // }
