@@ -153,9 +153,9 @@ function vis(){
     $.ajax({
       type: 'POST',
       url: 'index.php',
-      data: {productId: product},
+      data: {cart: product},
       success: function(response) {
-        alert('Product added to cart!');
+        alert(response + " added to cart");
       },
       error: function(error) {
           console.error('Error adding product to cart:', error);

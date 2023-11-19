@@ -5,15 +5,20 @@
     if( !empty($_SESSION['name'])){
         // $name = $_GET['name'] ;
         $name = $_SESSION['name'];
+        if((isset($_POST["addBtn"])) && !empty($_SESSION['cart'])){
+            echo '<script>';
             if(isset($_SESSION["cart"])){
                 $data = $_SESSION["cart"];
-                
                 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                     $cartContent = implode(', ', $_SESSION['cart']);
-                    echo "Cart: $cartContent";
+                    echo "alert('Cart: ')";
                 }
                 
+            }else{
+                echo "alert('cart is empty')";
             }
+            echo '</script>';
+        }
     }
     
     if(isset($_GET["logOut"])){
@@ -97,21 +102,22 @@
             foreach(fetchAllProducts() as $data){
         
                 if(isset($data)){
-                    // foreach(fetchAllProducts() as $data){
-                        
                         echo "<div>";
                         echo '<img src= " ' . $data["url"] . '">';
-                        // echo $data["url"];
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
-                        echo "<button deets='". $data["id"] . "' id='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
-                        echo"</div>";
-                    }
-                    // }
-                    
+                        if(isset($name)){
+                            echo "<form action='' method='post'><button deets='". $data["id"] . "' name='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
+                            echo"</div>";
+                        }else{
+                            echo "<a href='signup.php'><button ><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></a>";
+                            echo"</div>";
+                        }
+                    }                    
                 }
             ?>
     </div>
+    
  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
  <script src="main.js">
 
