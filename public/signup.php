@@ -80,9 +80,11 @@
 
                 <input type="text" name="phone" id="num" placeholder="PHONE" oninput="invalidNum()">
 
-                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()"><p class="eye" id="eye"><i class="fa-solid fa-eye" ></i></p><br>
+                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()">
+                <p class="eye" id="eye" onclick="togglePassVisibility(document.getElementById('pass'))"><i class="fa-solid fa-eye" ></i></p>
+                <br>
                 <input type="password" name="pass2" id="pass2" placeholder="CONFIRM PASSWORD" oninput="confirmPass()">
-                <p class="eye" id="eye2"><i class="fa-solid fa-eye"></i></p><br>
+                <p class="eye" id="eye2" onclick="togglePassVisibility(document.getElementById('pass2'))"><i class="fa-solid fa-eye"></i></p><br>
                 <button type="submit" name="signUpBut">CREATE</button><br>
                 <p class="errorDisp">
                 <?php
@@ -119,5 +121,5 @@
             ?>
         </div>
     <script src="main.js"></script>
-</body>
+    </body>
 </html>

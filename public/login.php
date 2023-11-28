@@ -47,7 +47,7 @@
                 <input type="text" name="email" id="" placeholder="EMAIL"><br>
                 <!-- <input type="text" name="phone" id="" placeholder="PHONE"><br> -->
                 <input type="password" name="pass" id="pass" placeholder="PASSWORD">
-                <p class="eye" id="eye"><i class="fa-solid fa-eye" ></i></p><br>
+                <p class="eye" id="eye" onclick="togglePassVisibility(document.getElementById('pass'))"><i class="fa-solid fa-eye" ></i></p><br>
                 <button type="submit">LOG-IN</button><br>
                 <p>Don't have an account ? <a href="signup.php">SIGNUP</a></p>
                 <p><a href="index.php"><i class="fa-solid fa-arrow-left"></i></a><a href="#"><i class="fa-solid fa-arrow-right"></i></a></p>

@@ -15,4 +15,5 @@
 <h3><u>NOTE</u>:</h3>
 <ul>
   <li>Add event listeners do not work with buttons in a form so you either have to style a regular element or use onclick 🙃</li>
+  <li></li>
 </ul>

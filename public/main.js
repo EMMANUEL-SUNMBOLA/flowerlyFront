@@ -104,21 +104,7 @@ const invalidName = () => {
   }
   const themeBut = document.getElementById("themeBut");
   themeBut.addEventListener("click", ()=>{themeToggle(themeBut)});
-
-  function togglePassVisibility(input){
-    // const pass = ;
-    if((input.getAttribute('type') === "") || (input.getAttribute('type') === "text")){
-      input.setAttribute("type", "password");
-    }else{
-      input.setAttribute("type", "text");
-    }    
-  }
-  const visBtn = document.querySelector('#eye');
-  visBtn.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass'))});
-  visBtn.addEventListener("click", ()=>{alert("hello")})
-  const visBtn2 = document.querySelector('#eye2');
-  visBtn2.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass2'))});
-
+  
   function displayCart(event) {
     var cart = document.getElementById("shopcart");
     if (cart.style.display === "none" || cart.style.display === "") {
@@ -144,3 +130,19 @@ const invalidName = () => {
       }
     });
   }
+
+  
+  function togglePassVisibility(input){
+    if((input.getAttribute('type') === "text")){
+      input.setAttribute("type", "password");
+    }else{
+      input.setAttribute("type", "text");
+    }
+  }
+
+  // const visBtn = document.getElementById('eye');
+  // const inp1 = document.getElementById('pass');
+  // visBtn.addEventListener("click", ()=>{togglePassVisibility(inp1)});
+  // const visBtn2 = document.getElementById('eye2');
+  // const inp2 = document.getElementById('#pass2');
+  // visBtn2.addEventListener("click", ()=>{togglePassVisibility(inp2)});
