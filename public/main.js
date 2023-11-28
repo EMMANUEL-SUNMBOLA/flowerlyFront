@@ -108,43 +108,16 @@ const invalidName = () => {
   function togglePassVisibility(input){
     // const pass = ;
     if((input.getAttribute('type') === "") || (input.getAttribute('type') === "text")){
-      pass.setAttribute("type", "password");
+      input.setAttribute("type", "password");
     }else{
-      pass.setAttribute("type", "text");
-    }
+      input.setAttribute("type", "text");
+    }    
   }
   const visBtn = document.querySelector('#eye');
   visBtn.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass'))});
+  visBtn.addEventListener("click", ()=>{alert("hello")})
   const visBtn2 = document.querySelector('#eye2');
-  visBtn.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass2'))});
-
-function vis(){
-    var but = document.getElementById("eye");
-    var inp = document.getElementById("pass");
-    inp.setAttribute('type','text');
-    but.setAttribute('onclick', 'hide()')
-  }
-  
-  function hide(){
-    var but = document.getElementById("eye");
-    var inp = document.getElementById("pass");
-    inp.setAttribute('type','password');
-    but.setAttribute('onclick', 'vis()');
-  }
-
-  function vis2(){
-    var but = document.getElementById("eye2");
-    var inp = document.getElementById("pass2");
-    inp.setAttribute('type', 'text');
-    but.setAttribute('onclick', 'hide2()')
-  }
-  
-  function hide2(){
-    var but = document.getElementById("eye2");
-    var inp = document.getElementById("pass2");
-    inp.setAttribute('type', 'password');
-    but.setAttribute('onclick', 'vis2()');
-  }
+  visBtn2.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass2'))});
 
   function displayCart(event) {
     var cart = document.getElementById("shopcart");
