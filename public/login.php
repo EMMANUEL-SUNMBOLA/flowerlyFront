@@ -46,8 +46,8 @@
                 <h1>SIGN-IN</h1>
                 <input type="text" name="email" id="" placeholder="EMAIL"><br>
                 <!-- <input type="text" name="phone" id="" placeholder="PHONE"><br> -->
-                <input type="password" name="pass" id="" placeholder="PASSWORD">
-                <button type="button" class="eye" id="eye" onclick="vis()"><i class="fa-solid fa-eye" ></i></button><br>
+                <input type="password" name="pass" id="pass" placeholder="PASSWORD">
+                <button type="button" class="eye" id="eye"><i class="fa-solid fa-eye" ></i></button><br>
                 <button type="submit">LOG-IN</button><br>
                 <p>Don't have an account ? <a href="signup.php">SIGNUP</a></p>
                 <p><a href="index.php"><i class="fa-solid fa-arrow-left"></i></a><a href="#"><i class="fa-solid fa-arrow-right"></i></a></p>

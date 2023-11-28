@@ -91,25 +91,32 @@ const invalidName = () => {
     }
   }
 
-const darkSide = () =>{
-    // alert("darkSide")
-    let themeBut = document.getElementById("themeBut");
-    let themeIcon = document.getElementById("themeIcon");
-    let body = document.getElementById("body");
-    themeIcon.classList.replace("fa-moon", "fa-sun");
-    body.classList.add("dark");
-    themeBut.setAttribute("onClick", 'lightSide()');
-}
+  function themeToggle(elem){
+    const themeIcon = document.getElementById("themeIcon");
+    const body  = document.body
+    if(themeIcon.classList.contains("fa-sun")){
+      body.classList.replace("light", "dark");
+      themeIcon.classList.replace("fa-sun", "fa-moon");
+    }else{
+      body.classList.replace("dark", "light");
+      themeIcon.classList.replace("fa-moon", "fa-sun")
+    }
+  }
+  const themeBut = document.getElementById("themeBut");
+  themeBut.addEventListener("click", ()=>{themeToggle(themeBut)});
 
-const lightSide = () =>{
-    // alert("lightSide");
-    let themeBut = document.getElementById("themeBut");
-    let themeIcon = document.getElementById("themeIcon");
-    let body = document.getElementById("body");
-    themeIcon.classList.replace("fa-sun", "fa-moon");
-    body.classList.remove("dark");
-    themeBut.setAttribute("onClick", "darkSide()");
-}
+  function togglePassVisibility(input){
+    // const pass = ;
+    if((input.getAttribute('type') === "") || (input.getAttribute('type') === "text")){
+      pass.setAttribute("type", "password");
+    }else{
+      pass.setAttribute("type", "text");
+    }
+  }
+  const visBtn = document.querySelector('#eye');
+  visBtn.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass'))});
+  const visBtn2 = document.querySelector('#eye2');
+  visBtn.addEventListener("click", ()=>{togglePassVisibility(document.querySelector('#pass2'))});
 
 function vis(){
     var but = document.getElementById("eye");
@@ -146,8 +153,10 @@ function vis(){
     } else {
       cart.style.display = "none";
     }
-    event.preventDefault(); // Prevent the default link action
+    event.preventDefault();
   }
+  const shop = document.querySelector('#shop');
+  shop.addEventListener("click", displayCart);
 
   function addToCart(product){
     $.ajax({

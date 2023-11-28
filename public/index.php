@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="dist/style.css">
     <title>FLOWERLY :HOME</title>
 </head>
-<body>
+<body class="light">
     <nav id="nav">
    
         <ul class="nav-brand">
@@ -56,7 +56,7 @@
             }
           ?>
           
-          <button onclick="darkSide()" id="themeBut"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
+          <button id="themeBut"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
           <?php
             if(isset($name)){
                 echo ' <form action="">
@@ -91,7 +91,7 @@
             </div>
             </div>';
             //floating cart button
-        echo '<div class="shop" id="shop"  onclick="displayCart(event)"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>';
+        echo '<div class="shop" id="shop"><a href=""><i class="fa-solid fa-cart-shopping"></i></a></div>';
         }
     ?>
      <div id="products">

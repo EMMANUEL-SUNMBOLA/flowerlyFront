@@ -80,8 +80,8 @@
 
                 <input type="text" name="phone" id="num" placeholder="PHONE" oninput="invalidNum()">
 
-                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()"><button type="button" class="eye" id="eye" onclick="vis()"><i class="fa-solid fa-eye" ></i></button><br>
-                <input type="password" name="pass2" id="pass2" placeholder="CONFIRM PASSWORD" oninput="confirmPass()"><button type="button" class="eye" id="eye2" onclick="vis2()"><i class="fa-solid fa-eye"></i></button><br>
+                <input type="password" name="pass" id="pass" placeholder="PASSWORD" oninput="validatePass()"><button type="button" class="eye" id="eye"><i class="fa-solid fa-eye" ></i></button><br>
+                <input type="password" name="pass2" id="pass2" placeholder="CONFIRM PASSWORD" oninput="confirmPass()"><button type="button" class="eye" id="eye2"><i class="fa-solid fa-eye"></i></button><br>
                 <button type="submit" name="signUpBut">CREATE</button><br>
                 <p class="errorDisp">
                 <?php
