@@ -1,4 +1,4 @@
-<h1>FLOWERLY</h1>
+<h1>#FLOWERLY</h1>
 <p>An E-commerce website for selling flowers</p>
 <p>Made using</p>
 <ul>
@@ -15,5 +15,5 @@
 <h3><u>NOTE</u>:</h3>
 <ul>
   <li>Add event listeners do not work with buttons in a form so you either have to style a regular element or use onclick 🙃</li>
-  <li></li>
+  <li>I'm trying to use D.R.Y method to make the codes more concise</li>
 </ul>
