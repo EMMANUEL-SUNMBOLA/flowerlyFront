@@ -8,6 +8,17 @@ function hashPass($pass){
     $conn = new PDO('sqlite:/home/emmanuel/flowerly.db');
     $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+    function dbInsert($arr, $table){
+        // $str = implode()
+        $param = "";
+        foreach($arr as $str){
+            $param = $str . ",";
+        }
+        return "INSERT INTO" . $table . "(" . $param . ")";
+        //I'll be back....
+        //I'm trying to make the code as short as possible YG ? D.R.Y!!!
+    }
+
 function createUser($name, $email, $phone, $pass){
     global $conn;
     $stmt = $conn -> prepare("INSERT INTO users (name, phone, email, pass) VALUES (:name, :phone, :email, :pass)");
