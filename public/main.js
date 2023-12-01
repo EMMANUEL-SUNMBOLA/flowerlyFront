@@ -140,6 +140,17 @@ const invalidName = () => {
     }
   }
 
+  function addToCart(b){
+    
+  }
+ const addBtn =  document.querySelector('#addBtn');
+ addBtn.addEventListener("click", ()=>{
+  const cart = document.querySelector('.cartcont');
+  //try t0 get the closest product div with images and all to the button
+  let product = addBtn.closest();
+  let newPrd = product.cloneNode(true);
+  cart.appendChild(newPrd);
+ })
   // const visBtn = document.getElementById('eye');
   // const inp1 = document.getElementById('pass');
   // visBtn.addEventListener("click", ()=>{togglePassVisibility(inp1)});

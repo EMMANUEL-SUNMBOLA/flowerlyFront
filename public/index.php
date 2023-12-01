@@ -78,16 +78,7 @@
             echo ' <div id="shopcart">
             <div class="cartcont">
                  <h1>' . $name . '\'s CART</h1>
-            <table>
-                     <tr>
-                         <th>Product Name</th>
-                         <th>Price</th>
-                         <th>Quantity</th>
-                     </tr>
-                 <tbody>
-         
-                 </tbody>
-            </table>
+
             </div>
             </div>';
             //floating cart button
@@ -107,7 +98,7 @@
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
                         if(isset($name)){
-                            echo "<form action='' method='post'><button deets='". $data["id"] . "' name='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
+                            echo "<form action='' method='post'><button deets='". $data["id"] . "' id='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
                             echo"</div>";
                         }else{
                             echo "<a href='signup.php'><button ><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></a>";
