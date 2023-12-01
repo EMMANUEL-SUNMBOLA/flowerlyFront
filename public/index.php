@@ -93,12 +93,12 @@
             foreach(fetchAllProducts() as $data){
         
                 if(isset($data)){
-                        echo "<div>";
+                        echo "<div class='product'>";
                         echo '<img src= " ' . $data["url"] . '">';
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
                         if(isset($name)){
-                            echo "<form action='' method='post'><button deets='". $data["id"] . "' id='addBtn' onclick='addToCart(". $data["id"] .")'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
+                            echo "<form action='' method='post'><button deets='". $data["id"] . "'  class='addBtn')><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
                             echo"</div>";
                         }else{
                             echo "<a href='signup.php'><button ><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></a>";

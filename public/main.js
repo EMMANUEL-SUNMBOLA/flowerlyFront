@@ -140,20 +140,10 @@ const invalidName = () => {
     }
   }
 
-  function addToCart(b){
-    
+ document.addEventListener("click", (event) => {
+
+  if (event.target.classList.contains('addBtn')) {
+      let cont = event.target.closest('.product').cloneNode(true);
+      document.querySelector(".cartcont").appendChild(cont);
   }
- const addBtn =  document.querySelector('#addBtn');
- addBtn.addEventListener("click", ()=>{
-  const cart = document.querySelector('.cartcont');
-  //try t0 get the closest product div with images and all to the button
-  let product = addBtn.closest();
-  let newPrd = product.cloneNode(true);
-  cart.appendChild(newPrd);
- })
-  // const visBtn = document.getElementById('eye');
-  // const inp1 = document.getElementById('pass');
-  // visBtn.addEventListener("click", ()=>{togglePassVisibility(inp1)});
-  // const visBtn2 = document.getElementById('eye2');
-  // const inp2 = document.getElementById('#pass2');
-  // visBtn2.addEventListener("click", ()=>{togglePassVisibility(inp2)});
+});

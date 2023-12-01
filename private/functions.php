@@ -85,6 +85,7 @@ function checkUser($email, $pass){
 
 function fetchAllProducts(){
         global $conn;
+        $stmt = $conn->prepare("SELECT * FROM posts");
         $stmt -> execute();
         while($row  = $stmt -> fetch(PDO::FETCH_ASSOC)){
             $result[] = $row;
