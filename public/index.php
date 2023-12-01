@@ -76,8 +76,8 @@
     // floating menu
           if(isset($name)){
             echo ' <div id="shopcart">
+            <h1>' . $name . '\'s CART</h1>
             <div class="cartcont">
-                 <h1>' . $name . '\'s CART</h1>
 
             </div>
             </div>';
@@ -98,7 +98,7 @@
                         echo "<p>". $data["head"] ."</p>";
                         echo "<p>". $data["description"] ."</p>";
                         if(isset($name)){
-                            echo "<form action='' method='post'><button deets='". $data["id"] . "'  class='addBtn')><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></form>";
+                            echo "<button class='addBtn'><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button>";
                             echo"</div>";
                         }else{
                             echo "<a href='signup.php'><button ><i class='fa-solid fa-dollar-sign'>". $data["price"] ."</i></button></a>";
@@ -109,7 +109,6 @@
             ?>
     </div>
     
- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
  <script src="main.js">
 
     

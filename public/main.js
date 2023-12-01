@@ -106,11 +106,15 @@ const invalidName = () => {
   themeBut.addEventListener("click", ()=>{themeToggle(themeBut)});
   
   function displayCart(event) {
-    var cart = document.getElementById("shopcart");
+    const cart = document.getElementById("shopcart");
+    let cartIcon = document.querySelector('.fa-cart-shopping');
     if (cart.style.display === "none" || cart.style.display === "") {
       cart.style.display = "block";
+      cartIcon.classList.replace('fa-cart-shopping', 'fa-x')
     } else {
+      let cartIcon = document.querySelector('.fa-x');
       cart.style.display = "none";
+      cartIcon.classList.replace('fa-x', 'fa-cart-shopping')
     }
     event.preventDefault();
   }
@@ -145,5 +149,9 @@ const invalidName = () => {
   if (event.target.classList.contains('addBtn')) {
       let cont = event.target.closest('.product').cloneNode(true);
       document.querySelector(".cartcont").appendChild(cont);
+      // cont.style.outline = '1px solid red';
+      // cont.style.width = '50%';
+      // cont.img.style.width = 'inherit';
+      event.preventDefault();
   }
 });
