@@ -1,10 +1,5 @@
-$pink : #dc3545;
-$black : #020202;
-$white : #f5f4f5;
-$purp : #1b1c30;
-$blue : #0369a1;
-$orange : #f68b1e;
-$darkOrange : #d47008;
+@use 'variables';
+@use 'signup';
 *{
     margin: 0;
     border: 0;
@@ -15,14 +10,14 @@ $darkOrange : #d47008;
 }
 
 body{
-    background-color: $white;
+    background-color: variables.$white;
     transition: all .5s ease-in-out;
     font-family: sans-serif;
 }
 
 .dark{
     filter: invert(1);
-    background-color: $black;
+    background-color: variables.$black;
     transition: all .5s ease-in-out;
     main{
         height: 100vh;
@@ -34,7 +29,7 @@ body{
 }
 
 nav{
-    background-color: $pink;
+    background-color: variables.$pink;
     // z-index: 1;
     display: flex;
     flex-direction: row;
@@ -45,7 +40,7 @@ nav{
         li{
             a{
                 text-decoration: none;
-                color: $black;
+                color: variables.$black;
                 font-weight: 900;
             }
         }
@@ -66,7 +61,7 @@ nav{
                     color: #000;
                     transition: all .37s ease-in-out;
                     &:hover{
-                        color: $white;
+                        color: variables.$white;
                     }
                 }
             }
@@ -87,7 +82,7 @@ nav{
         transition: all .37s ease-in-out;
         &:hover{
             background-color: #f5f4f5;
-            color: $black;
+            color: variables.$black;
         }
     }
 }
@@ -102,31 +97,31 @@ main{
         top : 15%;
         p{
             &:nth-child(1){
-                color: $pink;
+                color: variables.$pink;
                 font-size: 100px;
             }
             &:nth-child(2){
-                color: $pink;
+                color: variables.$pink;
                 font-size: 70px;
             }
             &:nth-child(3){
-                color: $pink;
+                color: variables.$pink;
                 font-size: 40px;
             }
             &:nth-child(4){
                button{
                     width: 200px;
                     height: 50px;
-                    background-color: $white;
-                    color: $black;
+                    background-color: variables.$white;
+                    color: variables.$black;
                     border-radius: 5%;
-                    border: 1px solid $pink;
+                    border: 1px solid variables.$pink;
                     font-size: 25px;
-                    color: $pink;
+                    color: variables.$pink;
                     transition: all .5s ease-in-out;
                     &:hover{
-                        background-color: $pink;
-                        color: $white;
+                        background-color: variables.$pink;
+                        color: variables.$white;
                     }
                }
             }
@@ -145,7 +140,7 @@ main{
  h1{
     font-size: 60px;
     span{
-        color: $pink;
+        color: variables.$pink;
     }
  }
  p{
@@ -159,7 +154,7 @@ main{
     height: max-content;
     h2{
         font-size: 70px;
-        color: $pink;
+        color: variables.$pink;
         text-transform: uppercase;
         text-align: center;
     }
@@ -185,7 +180,7 @@ main{
                     text-transform: capitalize;
                 }
                 &:nth-child(3){
-                    color: $black;
+                    color: variables.$black;
                     font-size: 15px;
                     text-transform: uppercase;
                 }
@@ -193,14 +188,14 @@ main{
             button{
                 width: 100px;
                 height: 40px;
-                border: 1px solid $pink;
+                border: 1px solid variables.$pink;
                 font-size: 20px;
                 transition: all .5s ease-in-out;
                 border-radius: 5px;
                 margin-top: 3px;
                 &:hover{
-                    background-color: $pink; 
-                    color: $white; 
+                    background-color: variables.$pink; 
+                    color: variables.$white; 
                     cursor: pointer;
                     backdrop-filter: blur(10px);              
                 }
@@ -212,8 +207,8 @@ main{
 #contact{
     height: max-content;
     margin: 25% 0 0 0;
-    background-color: $blue;
-    color: $white;
+    background-color: variables.$blue;
+    color: variables.$white;
     h2{
         font-size: 50px;
         text-align: center;
@@ -224,7 +219,7 @@ main{
         p{
             font-size: 20px;
             font-weight: 100;
-            color: $white;
+            color: variables.$white;
         }
         form{
             margin-top: 1%;
@@ -251,13 +246,13 @@ main{
                 background-color: rgba(240, 240, 240, 0.5);
                 border: none;
                 border-radius: 5px;
-                color: $white;
+                color: variables.$white;
                 cursor: pointer;
                 backdrop-filter: blur(10px);
                 transition: all .37s ease-in-out;
                 &:hover{
                     background-color: #f5f4f5;
-                    color: $black;
+                    color: variables.$black;
                 }
             }
         }
@@ -273,7 +268,7 @@ main{
     justify-content: center;
     right: 10px;
     bottom: 20px;
-    background-color: $orange;
+    background-color: variables.$orange;
     position: fixed;
     transition: all .5s ease-in-out;
     i{
@@ -281,7 +276,7 @@ main{
     }
 
     &:hover{
-        background-color: $darkOrange;
+        background-color: variables.$darkOrange;
         color: #ffffff;
     }
 }
@@ -335,7 +330,7 @@ main{
                     text-transform: capitalize;
                 }
                 &:nth-child(3){
-                    color: $black;
+                    color: variables.$black;
                     font-size: 15px;
                     text-transform: uppercase;
                 }
@@ -374,11 +369,11 @@ main{
                     font-size: 200%;
                 }
                 &:nth-child(2){
-                    color: $pink;
+                    color: variables.$pink;
                     font-size: 200%;
                 }
                 &:nth-child(3){
-                    color: $pink;
+                    color: variables.$pink;
                     font-size: 200%;
                 }
             }

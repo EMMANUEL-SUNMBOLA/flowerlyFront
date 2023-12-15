@@ -20,27 +20,20 @@
         }
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="dist/signup.css">
+    <?php require('head.php')?>
     <title>FLOWERLY| SIGNUP</title>
 </head>
 <body>
-    <nav>
+    <div id="nav">
         <ul>
             <li><span>FLOWERLY</span></li>
         </ul>
         <ul>
             <li>account</li>
         </ul>
-    </nav>
+    </div>
 
-    <main>
+    <section  class="logMain">
         <div>
             <form action="" method="post">
                 <h1>SIGN-IN</h1>
@@ -53,7 +46,7 @@
                 <p><a href="index.php"><i class="fa-solid fa-arrow-left"></i></a><a href="#"><i class="fa-solid fa-arrow-right"></i></a></p>
             </form>
         </div>
-    </main>
+    </section>
     <!-- <div class='error-disp'>
         <?php
             // if(!empty($_GET["error"])){

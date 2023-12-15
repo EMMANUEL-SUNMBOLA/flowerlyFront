@@ -1,8 +1,4 @@
-$pink : #dc3545;
-$black : #020202;
-$white : #f5f4f5;
-$purp : #1b1c30;
-$blue : #0369a1;
+@use 'variables';
 
 *{
     margin: 0;
@@ -14,16 +10,16 @@ $blue : #0369a1;
     // scroll-padding-top: ;
 }
 
-nav{
+#nav{
     // display: flex;
-    background-color: $pink;
+    background-color: variables.$pink;
     text-align: center;
     ul:nth-child(1){
         // display: block;
         li{
             list-style: none;
             span{
-                color: $black;
+                color: variables.$black;
                 text-transform: uppercase;
                 font-size: 30px;
             }
@@ -33,15 +29,15 @@ nav{
         // display: block;
             li{
                 list-style: none;
-                color: $white;
+                color: variables.$white;
                 text-transform: capitalize;
                 font-size: 20px;
             }
     }
 }
 
-main{
-    background-color: $purp;
+.logMain{
+    background-color: variables.$purp;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -49,7 +45,7 @@ main{
     justify-content: center;
     // outline: 1px solid green;
     h1{
-        color: $white;
+        color: variables.$white;
         font-weight: 100;
         text-align: center;
     }
@@ -64,13 +60,13 @@ main{
                 height: 40px;
                 border-radius: 5px;
                 border: none;
-                outline: 1px solid $blue;
-                color: $black;
+                outline: 1px solid variables.$blue;
+                color: variables.$black;
                 font-weight: 300;
                 font-size: 22px;
                 margin-top: 1%;
                 &::placeholder{
-                    color: $blue;
+                    color: variables.$blue;
                     font-size: 15px;
                     text-align: center;
                 }
@@ -85,7 +81,7 @@ main{
                 display: inline-block;
                 width: 25px;
                 height: 1rem;
-                color: $white;
+                color: variables.$white;
                 margin: -1% 0 0 -2%;
                 background-color: rgba(240, 240, 240, 0.5);
                 cursor: pointer;
@@ -95,7 +91,7 @@ main{
                 transition: all .5s ease-in-out;
                 &:hover{
                     background-color: rgba(240, 240, 240, 0.7);
-                    color: $purp;
+                    color: variables.$purp;
                 }
             }
             button{
@@ -104,7 +100,7 @@ main{
                 width: 150px;
                 height: 40px;
                 border: none;
-                outline: 1px solid $purp;
+                outline: 1px solid variables.$purp;
                 font-size: 16px;
                 background-color: rgba(240, 240, 240, 0.5);
                 border: none;
@@ -113,7 +109,7 @@ main{
                 transition: all .5s ease-in-out;
                 &:hover{
                     background-color: rgba(240, 240, 240, 0.7);
-                    color: $purp;
+                    color: variables.$purp;
                 }
             }
         }
@@ -138,7 +134,7 @@ main{
     }
 }
 @media(max-width: 768px){
-    main{
+    .logMain{
         display: flex;
         align-items: center;
         justify-content: center;
