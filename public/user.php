@@ -1,7 +1,7 @@
-<?php
-if(!isset($_SESSION["name"])){
-    header("Location:login.php");
-}else{?>
+<!-- <?php
+// if(!isset($_SESSION["name"])){
+    // header("Location:login.php");
+// }else{?>
 
 
 <?php include('head.php')?>
@@ -13,4 +13,4 @@ if(!isset($_SESSION["name"])){
 </html>
 
 
-<?}?>
+ -->

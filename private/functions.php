@@ -1,5 +1,5 @@
 <?php
-
+require('classes.php');
 function hashPass($pass){
     $newPass = password_hash($pass, PASSWORD_DEFAULT);
     return $newPass;
